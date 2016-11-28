@@ -12,12 +12,12 @@
 @implementation LoadingView
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 + (instancetype)shareInstance{
     
@@ -36,15 +36,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if(self){
-    
-
         
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
-//        
-//        tap.numberOfTapsRequired = 1;
-//        [view addGestureRecognizer:tap];
         
-   
+        
+        //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
+        //
+        //        tap.numberOfTapsRequired = 1;
+        //        [view addGestureRecognizer:tap];
+        
+        
         
         UIView *loaddingView = [[UIView alloc] initWithFrame:CGRectZero];
         loaddingView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -64,7 +64,7 @@
         
         UILabel *label = [[UILabel alloc] init];
         label.backgroundColor = [UIColor clearColor];
-
+        
         label.translatesAutoresizingMaskIntoConstraints = NO;
         label.tag = 2;
         label.font = [UIFont systemFontOfSize:14];
@@ -75,12 +75,12 @@
         
         
         NSLayoutConstraint *constrint1 = [NSLayoutConstraint constraintWithItem:loaddingView
-                                                                     attribute:NSLayoutAttributeCenterX
+                                                                      attribute:NSLayoutAttributeCenterX
                                                                       relatedBy:NSLayoutRelationEqual
-                                                                        toItem:self
-                                                                     attribute:NSLayoutAttributeCenterX
+                                                                         toItem:self
+                                                                      attribute:NSLayoutAttributeCenterX
                                                                      multiplier:1.0
-                                                                      constant:0];
+                                                                       constant:0];
         
         NSLayoutConstraint *constrint2 = [NSLayoutConstraint constraintWithItem:loaddingView
                                                                       attribute:NSLayoutAttributeCenterY
@@ -107,7 +107,7 @@
                                                                       attribute:NSLayoutAttributeTrailing
                                                                      multiplier:1.0
                                                                        constant:40];
-           constrint8.priority = 300;
+        constrint8.priority = 300;
         
         NSLayoutConstraint *constrint9 = [NSLayoutConstraint constraintWithItem:loaddingView
                                                                       attribute:NSLayoutAttributeHeight
@@ -117,7 +117,7 @@
                                                                      multiplier:1.0
                                                                        constant:100];
         
-       
+        
         NSLayoutConstraint *constrint3 = [NSLayoutConstraint constraintWithItem:activity
                                                                       attribute:NSLayoutAttributeCenterY
                                                                       relatedBy:NSLayoutRelationEqual
@@ -136,20 +136,20 @@
         
         
         NSLayoutConstraint *constrint13 = [NSLayoutConstraint constraintWithItem:activity
-                                                                      attribute:NSLayoutAttributeLeading
-                                                                      relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                         toItem:loaddingView
-                                                                      attribute:NSLayoutAttributeLeading
-                                                                     multiplier:1.0
-                                                                       constant:40];
+                                                                       attribute:NSLayoutAttributeLeading
+                                                                       relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                          toItem:loaddingView
+                                                                       attribute:NSLayoutAttributeLeading
+                                                                      multiplier:1.0
+                                                                        constant:40];
         
         NSLayoutConstraint *constrint14 = [NSLayoutConstraint constraintWithItem:activity
-                                                                      attribute:NSLayoutAttributeTrailing
-                                                                      relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                         toItem:loaddingView
-                                                                      attribute:NSLayoutAttributeTrailing
-                                                                     multiplier:1.0
-                                                                       constant:40];
+                                                                       attribute:NSLayoutAttributeTrailing
+                                                                       relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                          toItem:loaddingView
+                                                                       attribute:NSLayoutAttributeTrailing
+                                                                      multiplier:1.0
+                                                                        constant:40];
         
         
         NSLayoutConstraint *constrint5 = [NSLayoutConstraint constraintWithItem:label
@@ -170,31 +170,31 @@
         
         
         NSLayoutConstraint *constrint10 = [NSLayoutConstraint constraintWithItem:label
-                                                                      attribute:NSLayoutAttributeTop
-                                                                      relatedBy:NSLayoutRelationEqual
-                                                                         toItem:activity
-                                                                      attribute:NSLayoutAttributeBottom
-                                                                     multiplier:1.0
-                                                                       constant:10];
+                                                                       attribute:NSLayoutAttributeTop
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:activity
+                                                                       attribute:NSLayoutAttributeBottom
+                                                                      multiplier:1.0
+                                                                        constant:10];
         
         NSLayoutConstraint *constrint11 = [NSLayoutConstraint constraintWithItem:label
-                                                                      attribute:NSLayoutAttributeCenterY
-                                                                      relatedBy:NSLayoutRelationEqual
-                                                                         toItem:loaddingView
-                                                                      attribute:NSLayoutAttributeCenterY
-                                                                     multiplier:1.0
-                                                                       constant:0];
+                                                                       attribute:NSLayoutAttributeCenterY
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:loaddingView
+                                                                       attribute:NSLayoutAttributeCenterY
+                                                                      multiplier:1.0
+                                                                        constant:0];
         
         NSLayoutConstraint *constrint12 = [NSLayoutConstraint constraintWithItem:label
-                                                                      attribute:NSLayoutAttributeCenterX
-                                                                      relatedBy:NSLayoutRelationEqual
-                                                                         toItem:loaddingView
-                                                                      attribute:NSLayoutAttributeCenterX
-                                                                     multiplier:1.0
-                                                                       constant:0];
+                                                                       attribute:NSLayoutAttributeCenterX
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:loaddingView
+                                                                       attribute:NSLayoutAttributeCenterX
+                                                                      multiplier:1.0
+                                                                        constant:0];
         
         
-//
+        //
         [self addConstraint:constrint1];
         [self addConstraint:constrint2];
         [self addConstraint:constrint3];
@@ -205,10 +205,10 @@
         [self addConstraint:constrint8];
         [self addConstraint:constrint9];
         [self addConstraint:constrint10];
-      //  [self addConstraint:constrint11];
+        //  [self addConstraint:constrint11];
         [self addConstraint:constrint12];
-             [self addConstraint:constrint13];
-             [self addConstraint:constrint14];
+        [self addConstraint:constrint13];
+        [self addConstraint:constrint14];
         
     }
     return self;
@@ -220,7 +220,7 @@
     UIView *view = [self viewWithTag:1];
     UILabel *label = [view viewWithTag:2];
     UIActivityIndicatorView *activity = [view viewWithTag:3];
- 
+    
     label.text = nil;
     [activity stopAnimating];
     self.hidden = YES;
@@ -243,11 +243,17 @@
 }
 
 +(void)showWithStr:(NSString*)str{
-    [[self shareInstance] show:str];
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self shareInstance] show:str];
+    });
 }
+
 +(void)hidden {
-   [[self shareInstance] dismiss];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self shareInstance] dismiss];
+    });
+    
 }
 
 
