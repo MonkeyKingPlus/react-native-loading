@@ -1,0 +1,24 @@
+{
+  "name": "react-native-loading",
+  "version": "1.0.0",
+  "description": "loading view for ios and android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonkeyKingPlus/react-native-loading.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "load"
+  ],
+  "author": "kk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MonkeyKingPlus/react-native-loading/issues"
+  },
+  "homepage": "https://github.com/MonkeyKingPlus/react-native-loading#readme"
+}
