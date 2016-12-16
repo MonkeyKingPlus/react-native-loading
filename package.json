@@ -1,6 +1,6 @@
 {
   "name": "mkp-react-native-loading",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "loading view for ios and android",
   "main": "index.js",
   "scripts": {
