@@ -9,7 +9,10 @@
 #import "LoadingView.h"
 
 
-@implementation LoadingView
+@implementation LoadingView{
+
+    BOOL bCancel;
+}
 
 /*
  // Only override drawRect: if you perform custom drawing.
@@ -39,10 +42,10 @@
         
         
         
-        //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
-        //
-        //        tap.numberOfTapsRequired = 1;
-        //        [view addGestureRecognizer:tap];
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDismiss)];
+        
+                tap.numberOfTapsRequired = 1;
+                [self addGestureRecognizer:tap];
         
         
         
@@ -214,6 +217,12 @@
     return self;
 }
 
+
+- (void)tapDismiss{
+    if(bCancel){
+        [self dismiss];
+    }
+}
 - (void)dismiss{
     
     
@@ -226,8 +235,9 @@
     self.hidden = YES;
 }
 
-- (void)show:(NSString*)str{
+- (void)show:(NSString*)str cancelAble:(BOOL)cancel{
     
+    bCancel = cancel;
     
     UIView *view = [self viewWithTag:1];
     if(str){
@@ -242,9 +252,10 @@
     
 }
 
-+(void)showWithStr:(NSString*)str{
++(void)showWithStr:(NSString*)str cancelAble:(BOOL)bCancel{
+   
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[self shareInstance] show:str];
+        [[self shareInstance] show:str cancelAble:bCancel];
     });
 }
 

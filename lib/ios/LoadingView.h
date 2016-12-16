@@ -11,7 +11,7 @@
 @interface LoadingView : UIView
 
 
-+(void)showWithStr:(NSString*)str;
++(void)showWithStr:(NSString*)str cancelAble:(BOOL)bCancel;
 +(void)hidden;
 
 @end

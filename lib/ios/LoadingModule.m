@@ -12,10 +12,10 @@
 @implementation LoadingModule
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(show:(NSString*)str)
+RCT_EXPORT_METHOD(show:(NSString*)str cancelAble:(BOOL)bCancel)
 {
     
-    [LoadingView showWithStr:str];
+    [LoadingView showWithStr:str cancelAble:bCancel];
 }
 
 RCT_EXPORT_METHOD(hidden)
